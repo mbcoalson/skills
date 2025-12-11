@@ -20,12 +20,38 @@ Automatically activate when the user:
 **ALWAYS use the script** - do NOT use manual git commands:
 
 ```bash
-bash skills/git-pushing/scripts/smart_commit.sh
+bash .claude/skills/git-pushing/scripts/smart_commit.sh
 ```
 
 With custom message:
 ```bash
-bash skills/git-pushing/scripts/smart_commit.sh "feat: add feature"
+bash .claude/skills/git-pushing/scripts/smart_commit.sh "feat: add feature"
 ```
 
 Script handles: staging, conventional commit message, Claude footer, push with -u flag.
+
+## Authentication Setup
+
+**Recommended: Use HTTPS with Personal Access Token**
+
+The script automatically checks for SSH URL rewrites and uses HTTPS for authentication:
+
+1. Remote URLs should use HTTPS format: `https://github.com/username/repo.git`
+2. Git will prompt for credentials or use stored credentials
+3. If you have a global SSH rewrite (`url.git@github.com:.insteadOf`), the script will warn you
+
+**To configure HTTPS authentication:**
+```bash
+# Set remote to HTTPS
+git remote set-url origin https://github.com/username/repo.git
+
+# Store credentials (optional)
+git config --global credential.helper store
+```
+
+## Edge Cases Handled
+
+- **No commits yet**: Script handles repos with no HEAD gracefully
+- **SSH rewrites**: Detects and warns about global SSH URL rewrites
+- **New branches**: Automatically uses `-u` flag for first push
+- **No changes**: Exits gracefully if nothing to commit

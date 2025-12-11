@@ -15,9 +15,40 @@ info() { echo -e "${GREEN}→${NC} $1"; }
 warn() { echo -e "${YELLOW}⚠${NC} $1"; }
 error() { echo -e "${RED}✗${NC} $1" >&2; }
 
+# Check for SSH URL rewrites that can cause authentication issues
+check_ssh_rewrite() {
+    local rewrite=$(git config --global --get url.git@github.com:.insteadOf 2>/dev/null || echo "")
+    if [ -n "$rewrite" ]; then
+        warn "Global SSH URL rewrite detected (git config url.git@github.com:.insteadOf)"
+        warn "This may cause authentication issues. Consider using HTTPS remotes."
+        warn "To disable: git config --global --unset url.git@github.com:.insteadOf"
+    fi
+}
+
+# Check if repository has any commits yet (handle no HEAD)
+if ! git rev-parse --verify HEAD >/dev/null 2>&1; then
+    error "No commits in repository yet. Cannot determine branch."
+    error "Create an initial commit first, then use this script for subsequent commits."
+    exit 1
+fi
+
+# Check for SSH rewrites
+check_ssh_rewrite
+
 # Get current branch
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 info "Current branch: $CURRENT_BRANCH"
+
+# Check remote URL format and recommend HTTPS
+REMOTE_URL=$(git remote get-url origin 2>/dev/null || echo "")
+if [ -n "$REMOTE_URL" ]; then
+    if echo "$REMOTE_URL" | grep -q "^git@"; then
+        warn "Remote uses SSH (git@github.com). HTTPS is recommended for better compatibility."
+        info "To switch: git remote set-url origin https://github.com/username/repo.git"
+    elif echo "$REMOTE_URL" | grep -q "^https://"; then
+        info "Remote URL: $REMOTE_URL (HTTPS ✓)"
+    fi
+fi
 
 # Check if there are changes
 if git diff --quiet && git diff --cached --quiet; then
