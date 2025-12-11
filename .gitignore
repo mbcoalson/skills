@@ -1,0 +1,31 @@
+# Temporary files
+temp_*.py
+temp_*.txt
+temp_*.md
+temp_*.json
+nul
+
+# Archives
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.obsidian/workspace*
+
+# Sensitive data
+*credentials*
+*secrets*
+*.env
+
+# Build outputs
+output_*/
+*.pyc
+__pycache__/
+
+# Patches
+*.diff
+*.patch
