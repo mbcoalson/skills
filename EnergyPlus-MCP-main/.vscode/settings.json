@@ -1,0 +1,16 @@
+{
+  "mcp.servers": {
+    "energyplus": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "-v", "${workspaceFolder}:/workspace",
+        "-w", "/workspace/energyplus-mcp-server",
+        "energyplus-mcp-dev",
+        "uv", "run", "python", "-m", "energyplus_mcp_server.server"
+      ]
+    }
+  }
+}

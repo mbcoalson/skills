@@ -1,0 +1,25 @@
+{
+  "servers": {
+    "filesystem": {
+      "type": "stdio", 
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-filesystem",
+        "/workspace/energyplus-mcp-server",
+        "/app/software/EnergyPlusV25-1-0",
+        "/tmp"
+      ]
+    },
+    "energyplus": {
+      "type": "stdio",
+      "command": "/workspace/energyplus-mcp-server/.venv/bin/python",
+      "args": [
+        "-m",
+        "energyplus_mcp_server.server"
+      ],
+      "env": {
+        "EPLUS_IDD_PATH": "/app/software/EnergyPlusV25-1-0/Energy+.idd"
+      }
+    }
+  }
+}

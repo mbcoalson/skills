@@ -1,0 +1,28 @@
+{
+  "name": "converting-markdown-to-word",
+  "version": "1.0.0",
+  "description": "Convert Markdown files to Microsoft Word (.docx) format",
+  "type": "module",
+  "main": "scripts/convert-md-to-docx.js",
+  "scripts": {
+    "convert": "node scripts/convert-md-to-docx.js",
+    "batch": "node scripts/convert-md-to-docx.js --batch",
+    "test": "node scripts/convert-md-to-docx.js --help"
+  },
+  "keywords": [
+    "markdown",
+    "word",
+    "docx",
+    "conversion",
+    "documentation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "docx": "^8.5.0",
+    "markdown-it": "^14.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

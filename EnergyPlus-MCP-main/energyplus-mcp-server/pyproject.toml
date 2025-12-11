@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "energyplus-mcp-server"
+version = "0.1.0"
+description = "EnergyPlus MCP Server"
+authors = [{name = "Han Li", email = "hanli@lbl.gov"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]",
+    "eppy",
+    "matplotlib",
+    "networkx",
+    "pandas",
+    "plotly",
+    "graphviz"
+]
+license = {text = "BSD-3-Clause-LBNL"}
+keywords = ["EnergyPlus", "MCP", "server"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+homepage = "https://github.com/LBNL-ETA/EnergyPlus-MCP"
+repository = "https://github.com/LBNL-ETA/EnergyPlus-MCP"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["energyplus_mcp_server*"]
+
+[project.optional-dependencies]
+dev = [
+    "ipykernel",
+    "pytest",
+    "pytest-cov",
+    "pytest-asyncio",
+    "black",
+    "ruff",
+    "mypy"
+]
