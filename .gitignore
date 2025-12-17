@@ -19,6 +19,8 @@ Mytikas*.xlsx
 
 # Local settings
 .claude/settings.local.json
+.claude/skills/work-command-center/time-log.jsonl
+.claude/skills/*/SESSION_*.md
 .mcp.json
 .obsidian/
 CLAUDE_INSTRUCTIONS.md
