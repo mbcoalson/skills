@@ -1,31 +1,64 @@
-# Temporary files
-temp_*.py
-temp_*.txt
-temp_*.md
-temp_*.json
-nul
+# Company data - DO NOT COMMIT
+User-Files/
+Project-Specific-Instructions/
+Resources/
+Claude-Workspace/
+docs/
 
-# Archives
-*.zip
+# Project-specific files
+Prairie Heights Collected/
+SECC-*.docx
+SECC-*.md
+SECC-*.pdf
+Tri-State.md
+Codex*.md
+Mytikas*.xlsx
+*.docx
+*.xlsx
+*.pdf
+
+# Local settings
+.claude/settings.local.json
+.mcp.json
+.obsidian/
+CLAUDE_INSTRUCTIONS.md
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+.venv/
+venv/
 
 # OS files
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# IDE
-.vscode/settings.json
-.obsidian/workspace*
+# Temp files
+*.tmp
+*.bak
+*.swp
+*~
+original_report*.txt
+original_report*.md
+revised_report*.txt
+revised_report*.md
 
-# Sensitive data
-*credentials*
-*secrets*
-*.env
+# Scripts that might contain paths
+*.bat
+copy_*.bat
+apply_*.osw
+apply_*.py
+remove_*.py
+test_*.rb
 
-# Build outputs
-output_*/
-*.pyc
-__pycache__/
-
-# Patches
-*.diff
-*.patch
+# Output directories
+output*/
+run/

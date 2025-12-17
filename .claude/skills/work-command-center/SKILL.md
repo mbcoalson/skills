@@ -98,17 +98,37 @@ See [tool-reference.md](./tool-reference.md) for complete tool documentation.
 
 When technical deep-dives are needed, delegate to specialized skills. See [skill-orchestration-guide.md](./skill-orchestration-guide.md) for complete delegation patterns.
 
-**Available Skills:**
+**Available Skills (by Category):**
 
-- **skill-builder** - Creating/editing Claude Skills
-- **converting-markdown-to-word** - Convert .md to .docx for sharing
-- **energyplus-assistant** - EnergyPlus QA/QC, HVAC topology, ECM testing
-- **energy-efficiency** - Energy modeling, ASHRAE standards, code compliance
-- **writing-openstudio-model-measures** - Write Ruby ModelMeasures for OpenStudio
-- **skyspark-analysis** - SkySpark analytics and building automation
-- **commissioning-reports** - MBCx workflows and testing procedures
-- **n8n-automation** - Multi-agent workflow automation
-- **work-documentation** - Company procedures and standards
+### Project Documentation & Management
+
+- **writing-oprs** - Creating Owner Project Requirements documents for commissioning projects (ASHRAE 202, Guideline 0)
+- **work-documentation** - Company procedures, standards, templates, and professional communication
+- **converting-markdown-to-word** - Convert .md to .docx for sharing with colleagues
+- **git-pushing** - Stage, commit, and push with conventional commit messages
+
+### Energy Modeling & Simulation
+
+- **energy-efficiency** - Energy modeling, ASHRAE standards, code compliance verification
+- **energyplus-assistant** - EnergyPlus QA/QC, HVAC topology analysis, ECM testing
+- **running-openstudio-models** - Run OpenStudio 3.10 models, apply measures, validate changes
+- **diagnosing-energy-models** - Troubleshoot geometry errors, HVAC validation, LEED baseline generation
+- **writing-openstudio-model-measures** - Write Ruby ModelMeasures for OpenStudio automation
+
+### Building Systems & Operations
+
+- **hvac-specifications** - Look up equipment specs by brand and model number (AHU, VAV, chiller, etc.)
+- **commissioning-reports** - MBCx workflows, testing protocols, report generation (ASHRAE Guideline 0, NEBB)
+- **skyspark-analysis** - SkySpark analytics, fault detection, Axon queries for building automation
+
+### Business Development
+
+- **energize-denver-proposals** - Create Energize Denver compliance proposals (benchmarking, audits, compliance pathways)
+
+### Development Tools
+
+- **skill-builder** - Creating/editing Claude Code skills, SKILL.md files, supporting documentation
+- **n8n-automation** - Multi-agent workflow automation, SkySpark integration, FastAPI tool servers
 
 **Orchestration Rules:**
 
@@ -116,6 +136,24 @@ When technical deep-dives are needed, delegate to specialized skills. See [skill
 2. Delegate to specialized skills with clear context
 3. Return to Command Center with summary
 4. Update deliverables with outcomes
+
+**When to Delegate (Decision Tree):**
+
+- User mentions **OPR, Owner Project Requirements, commissioning documentation** → `writing-oprs`
+- User needs **equipment specs, model numbers, manufacturer data** → `hvac-specifications`
+- User has **energy model errors, geometry issues, LEED baseline** → `diagnosing-energy-models`
+- User wants to **run OpenStudio simulation, apply measures** → `running-openstudio-models`
+- User needs **custom OpenStudio measure in Ruby** → `writing-openstudio-model-measures`
+- User asks about **EnergyPlus IDF, QA/QC, HVAC topology** → `energyplus-assistant`
+- User needs **energy calculations, ASHRAE standards** → `energy-efficiency`
+- User mentions **commissioning reports, MBCx, testing procedures** → `commissioning-reports`
+- User asks about **SkySpark, Axon queries, building analytics** → `skyspark-analysis`
+- User wants **Energize Denver proposal, Denver compliance** → `energize-denver-proposals`
+- User needs **company procedures, standards, templates** → `work-documentation`
+- User wants to **convert markdown to Word** → `converting-markdown-to-word`
+- User wants to **commit and push changes, save to GitHub** → `git-pushing`
+- User is **creating or editing a Claude Code skill** → `skill-builder`
+- User mentions **n8n workflows, automation, multi-agent systems** → `n8n-automation`
 
 ---
 
@@ -138,4 +176,4 @@ If `User-Files/work-tracking/` doesn't exist:
 
 ---
 
-Last Updated: 2025-12-02
+Last Updated: 2025-12-17
