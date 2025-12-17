@@ -50,6 +50,13 @@ original_report*.txt
 original_report*.md
 revised_report*.txt
 revised_report*.md
+temp_*.py
+temp_*.txt
+temp_*.md
+temp_*.json
+nul
+patch.diff
+*.zip
 
 # Scripts that might contain paths
 *.bat
@@ -62,3 +69,7 @@ test_*.rb
 # Output directories
 output*/
 run/
+n8n/
+outlook-integration/
+scripts/
+.vscode/
