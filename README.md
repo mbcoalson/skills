@@ -110,6 +110,27 @@ Each skill directory contains a `SKILL.md` file with detailed usage instructions
 
 These skills are tailored for building energy consulting workflows but can be adapted for other domains. Feel free to fork and modify for your own use cases.
 
+### Creating Your Own Skills Repository
+
+There are several approaches to creating your own Claude Code skills repository:
+
+**Option 1: Fork This Repository**
+- Best for contributing skills back or building on the existing 16 skills
+- Click "Fork" on GitHub, clone your fork, and add your skills
+- Submit a pull request to contribute back
+
+**Option 2: Create a New Repository** (Recommended for specialized domains)
+- Best for completely different use cases or including project-specific data
+- Create a new repo and adopt the `.claude/skills/` structure
+- See [KORIB7_ANALYSIS.md](./KORIB7_ANALYSIS.md) for a detailed example
+
+**Option 3: Start from Scratch**
+- Use this repository as inspiration for structure and patterns
+- Create your own skill organization system
+- Customize completely for your workflow
+
+For a detailed analysis of how [KoriB7](https://github.com/KoriB7) successfully created their own skills repository, see [KORIB7_ANALYSIS.md](./KORIB7_ANALYSIS.md).
+
 ## License
 
 Skills and tools in this repository are provided as-is for personal and professional use.
