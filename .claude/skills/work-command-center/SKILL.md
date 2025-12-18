@@ -62,6 +62,53 @@ All tracking files stored in: `User-Files/work-tracking/`
 
 ---
 
+## Tool/Skill Lookup Protocol
+
+**CRITICAL: Before suggesting a new tool, follow this decision tree to reduce token usage and avoid duplication.**
+
+### Step 1: Check Existing Tools FIRST
+
+- Search `.claude/skills/work-command-center/tools/` directory for existing scripts
+- Look for `.js`, `.py`, or other files that might already handle the task
+- Check [tool-reference.md](./tool-reference.md) for tool descriptions
+- **If found** → Use that existing tool immediately
+
+### Step 2: Check Skill Orchestration Guide SECOND
+
+- Read [skill-orchestration-guide.md](./skill-orchestration-guide.md) to see if a specialized skill exists
+- Review the "When to Delegate" decision tree (also below in this document)
+- Check if the task fits any available skill's description
+- **If found** → Delegate to that skill using the Skill tool
+
+### Step 3: ONLY THEN Ask the User
+
+- If no existing tool OR skill found, ASK the user if a new tool is needed
+- **Do NOT just create it** - explain:
+  - What you searched for in existing tools
+  - What you checked in the skill orchestration guide
+  - Why you think something new is needed
+- Get user confirmation before building anything new
+
+### Why This Matters
+
+- **Reduces token usage** - Don't recreate what already exists
+- **Leverages existing infrastructure** - Use battle-tested tools
+- **Follows "check before you build"** - Avoid duplication of effort
+- **Maintains consistency** - Existing tools have established patterns
+
+### Example Workflow
+
+```text
+User: "I need to convert a PDF to markdown"
+
+✗ WRONG: "Let me create a Python script to do that..."
+✓ RIGHT:
+  1. Check tools/ → Found: convert-to-markdown.py
+  2. Use existing tool: python .claude/skills/work-command-center/tools/convert-to-markdown.py <file>
+```
+
+---
+
 ## Session Start Protocol
 
 1. **Get current date/time context**: Run `node .claude/skills/work-command-center/tools/get-datetime.js`
@@ -176,4 +223,4 @@ If `User-Files/work-tracking/` doesn't exist:
 
 ---
 
-Last Updated: 2025-12-17
+Last Updated: 2025-12-18
