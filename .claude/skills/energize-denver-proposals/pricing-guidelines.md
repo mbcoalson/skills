@@ -6,7 +6,7 @@ Pricing models, factors, and guidelines for Energize Denver compliance services.
 
 ## Pricing Philosophy
 
-Iconergy pricing for Energize Denver services balances:
+Pricing for Energize Denver services balances:
 1. **Value to Client**: Cost of compliance vs. penalty avoidance
 2. **Scope Complexity**: Building size, systems, data quality
 3. **Market Competitiveness**: Denver consulting market rates
@@ -42,12 +42,14 @@ Iconergy pricing for Energize Denver services balances:
 - Risk shared with client
 
 **Structure**:
-- Hourly rates by staff level:
-  - Principal Engineer: $200-$250/hr
-  - Senior Engineer: $150-$180/hr
-  - Project Engineer: $120-$150/hr
-  - Analyst/Coordinator: $90-$120/hr
+- Hourly rates by staff level (calibrate to your market/region):
+  - Principal Engineer: $[HIGH_RATE]/hr
+  - Senior Engineer: $[MED_HIGH_RATE]/hr
+  - Project Engineer: $[MED_RATE]/hr
+  - Analyst/Coordinator: $[BASE_RATE]/hr
 - NTE cap provides client budget protection
+
+**Note:** Adjust these rates based on your local market conditions, firm overhead, and competitive landscape.
 
 **Best For**:
 - First-time benchmarking (unknown data issues)
@@ -104,8 +106,8 @@ Iconergy pricing for Energize Denver services balances:
 **Recommended Model**: Fixed fee for straightforward, T&M NTE if data quality uncertain
 
 **Example Pricing**:
-- *Schomp Nissan (25k sf, good data)*: $3,000 T&M NTE
-- *Real Atlas apartments (portfolio, 2 buildings)*: $5,500 fixed fee ($3,000 + $2,500 with portfolio discount)
+- *Auto dealership (25k sf, good data)*: $3,000 T&M NTE
+- *Multifamily portfolio (2 buildings, 20k sf each)*: $5,500 fixed fee ($3,000 + $2,500 with portfolio discount)
 
 ---
 
@@ -308,19 +310,20 @@ Labor hours × blended rate × overhead multiplier
 
 **Benchmarking Services**:
 - Low-cost providers: $1,500-$2,500
-- Mid-tier (Iconergy): $2,500-$5,000
+- Mid-tier firms: $2,500-$5,000
 - High-end/full-service: $5,000-$8,000+
 
 **Energy Audits (Level 2)**:
 - Low-cost providers: $15,000-$25,000
-- Mid-tier (Iconergy): $25,000-$50,000
+- Mid-tier firms: $25,000-$50,000
 - High-end engineering firms: $50,000-$80,000+
 
-**Value Proposition for Iconergy**:
-- Deep Energize Denver expertise (Article XIV compliance)
-- Local presence and relationships
-- Full-service (benchmarking → audits → implementation → commissioning)
-- Experience with CASR and alternate compliance pathways
+**Value Proposition Examples**:
+
+- Deep regulatory expertise with local compliance programs
+- Local presence and relationships with regulatory agencies
+- Full-service offerings (benchmarking → audits → implementation → commissioning)
+- Experience with alternate compliance pathways and CASR coordination
 
 ---
 

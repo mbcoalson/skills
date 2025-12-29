@@ -22,7 +22,8 @@ All tracking files stored in: `User-Files/work-tracking/`
 - `team-status.md` - Team member workloads
 - `daily-logs/YYYY-MM-DD.md` - Daily standup logs
 - `counters.json` - Metric counters (rescued deadlines, delegation wins, etc.)
-- `time-log.jsonl` - Time tracking data
+- `time-log.jsonl` - Time tracking data (JSONL format, one entry per session)
+- `active-session.json` - Current active session state (persists across chat restarts)
 
 ## Quick Actions
 
@@ -112,19 +113,45 @@ User: "I need to convert a PDF to markdown"
 ## Session Start Protocol
 
 1. **Get current date/time context**: Run `node .claude/skills/work-command-center/tools/get-datetime.js`
-2. Check if tracking files exist (create from templates if needed)
-3. Ask: "What's on your mind?" or "Quick status check or deep planning?"
-4. Provide relevant view (deliverables, team status, or brain dump mode)
-5. End with clear next action
+2. **Check for active session**: Run `node .claude/skills/work-command-center/tools/session-state.js resume`
+   - If active session exists:
+     - Show summary: "You have an active session: [duration] on [Project]"
+     - Ask: "Continue this session or finalize and start new?"
+     - If continue: proceed with existing context
+     - If finalize: run finalize command, then start new session
+   - If no active session: proceed to step 3
+3. **Start new session**: Ask "What project/task brings you here today?"
+   - **REQUIRED**: Get project name from user
+   - **REQUIRED**: Get project number from user (for billing/tracking)
+   - Get initial task description (optional)
+   - Run: `node .claude/skills/work-command-center/tools/session-state.js start --project "Project Name" --project-number "PN-123" --task "Task description"`
+   - Example: `--project "Office Building Energy Audit" --project-number "EA-2024-089" --task "Energy model QA/QC"`
+4. Check if tracking files exist (create from templates if needed)
+5. Provide relevant view (deliverables, team status, or brain dump mode)
+6. End with clear next action
+
+**Session Checkpoints**: Throughout the session, when major activities complete, run:
+- `node .claude/skills/work-command-center/tools/session-state.js checkpoint --activity "Activity description"`
 
 ## Session End Protocol
 
 At the end of EVERY Work Command Center session:
 
-1. Estimate session duration in minutes
-2. Identify primary task/activity
-3. Assign to project (or "Internal/Admin" for overhead)
-4. Log time: `node .claude/skills/work-command-center/tools/log-time.js --duration X --task "..." --project "..."`
+1. **Finalize active session automatically**: Run `node .claude/skills/work-command-center/tools/session-state.js finalize --notes "Session summary"`
+   - This will:
+     - Calculate total duration automatically
+     - Log all activities tracked during session
+     - Append entry to time-log.jsonl
+     - Clear active-session.json
+2. Show summary to user:
+   - Project worked on
+   - Total duration
+   - Key activities completed
+3. Remind user they can view weekly timesheet with: `node .claude/skills/work-command-center/tools/weekly-timesheet.js`
+
+**Abandoned Session Recovery**: If a session is left open (user forgot to finalize):
+- Next session will detect and prompt to finalize or continue
+- Weekly review will show unclosed sessions for cleanup
 
 ---
 
@@ -135,9 +162,11 @@ See [tool-reference.md](./tool-reference.md) for complete tool documentation.
 **Quick Reference:**
 
 - `get-datetime.js` - Current date/time for deadline tracking
-- `log-time.js` - Log time spent on tasks
+- `session-state.js` - Session state management (start, checkpoint, resume, finalize, status)
+- `log-time.js` - Manual time logging (legacy - use session-state.js instead)
 - `weekly-timesheet.js` - Generate weekly timesheet summaries
 - `counter.js` - Track metrics (rescued-deadlines, delegation-wins, etc.)
+- `convert-md-to-docx-pypandoc.py` - Convert markdown to Word with table support
 
 ---
 
@@ -151,7 +180,6 @@ When technical deep-dives are needed, delegate to specialized skills. See [skill
 
 - **writing-oprs** - Creating Owner Project Requirements documents for commissioning projects (ASHRAE 202, Guideline 0)
 - **work-documentation** - Company procedures, standards, templates, and professional communication
-- **converting-markdown-to-word** - Convert .md to .docx for sharing with colleagues
 - **git-pushing** - Stage, commit, and push with conventional commit messages
 
 ### Energy Modeling & Simulation
@@ -197,7 +225,6 @@ When technical deep-dives are needed, delegate to specialized skills. See [skill
 - User asks about **SkySpark, Axon queries, building analytics** → `skyspark-analysis`
 - User wants **Energize Denver proposal, Denver compliance** → `energize-denver-proposals`
 - User needs **company procedures, standards, templates** → `work-documentation`
-- User wants to **convert markdown to Word** → `converting-markdown-to-word`
 - User wants to **commit and push changes, save to GitHub** → `git-pushing`
 - User is **creating or editing a Claude Code skill** → `skill-builder`
 - User mentions **n8n workflows, automation, multi-agent systems** → `n8n-automation`

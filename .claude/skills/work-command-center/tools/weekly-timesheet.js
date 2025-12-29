@@ -15,8 +15,8 @@ const jsonOutput = args.includes('--json');
 const weekIndex = args.indexOf('--week');
 const targetWeekStart = weekIndex >= 0 ? new Date(args[weekIndex + 1]) : null;
 
-// Read time log
-const logPath = path.join(__dirname, '..', 'time-log.jsonl');
+// Read time log from User-Files/work-tracking
+const logPath = path.join(process.cwd(), 'User-Files', 'work-tracking', 'time-log.jsonl');
 let entries = [];
 
 if (fs.existsSync(logPath)) {

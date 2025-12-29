@@ -49,9 +49,27 @@ git remote set-url origin https://github.com/username/repo.git
 git config --global credential.helper store
 ```
 
+## Security Checks
+
+**Automatic security scanning** runs before every push to detect:
+
+- ❌ Internal hourly rates (e.g., `$200-$250/hr`)
+- ❌ Client names in code examples
+- ❌ Client-specific file paths (e.g., `User-Files/work-tracking/client-name/`)
+- ❌ Company branding in generic examples
+- ❌ Forbidden document types (.docx proposals, contracts, etc.)
+
+**Configure patterns:** Edit `.claude/skills/git-pushing/scripts/security_patterns.conf`
+
+**Bypass security check** (NOT recommended):
+```bash
+SKIP_SECURITY_CHECK=1 bash .claude/skills/git-pushing/scripts/smart_commit.sh
+```
+
 ## Edge Cases Handled
 
 - **No commits yet**: Script handles repos with no HEAD gracefully
 - **SSH rewrites**: Detects and warns about global SSH URL rewrites
 - **New branches**: Automatically uses `-u` flag for first push
 - **No changes**: Exits gracefully if nothing to commit
+- **Sensitive data**: Blocks push if sensitive patterns detected

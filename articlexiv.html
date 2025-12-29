@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="mcc.library_desktop" ng-strict-di="true">
+<head>
+    <title>Municode Library</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="municipal, codes, codification" />
+    <meta name="description" content="MunicodeNEXT, the industry's leading search application with over 3,300 codes and growing!" />
+    <base href="https://library.municode.com/" />
+
+    <link rel="icon" type="image/png" href="dist/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="dist/img/favicon.svg" />
+    <link rel="shortcut icon" href="dist/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="dist/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Municode Codification" />
+    <link rel="manifest" href="dist/img/site.webmanifest" />
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link href="dist/css/all/all.css?v=78vKj-1IMGnPvCtk7-53ZDaD4KTYB3AMS_V7VrEQUHI" rel="stylesheet" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWTX042HHN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-EWTX042HHN');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/oidc-client/1.11.5/oidc-client.min.js" integrity="sha512-pGtU1n/6GJ8fu6bjYVGIOT9Dphaw5IWPwVlqkpvVgqBxFkvdNbytUh0H8AP15NYF777P4D3XEeA/uDWFCpSQ1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
+    
+    <script>
+        serverProps = {
+            authUrl: "https://auth.municode.com"
+            , authLibraryWebClientId: "municodeLibraryWeb-prod"
+            , libraryApiUrl: "/api"
+            , appRoot: "/library" //must be /library for angular template cache
+            , scribdPublisherId: 'pub-50084411223247426799'
+            , flexPaperKey: "$2f762821a89b41aecc1"
+            , configType: 'PROD'
+            , loggedInAtOP: false
+            , adminUrl: "/admin"
+            , azureFunctionsUrlBase: "https://mcclibraryfunctions.azurewebsites.us/api"
+            , supportUrl: "https://www.codification.civicplus.help/hc/en-us"
+            , submitFeedbackUrl: "https://civicplus.airfocus.com/share/forms/54e8bc9564adcf729a87c46bb373fc13"
+            , advancedSearchSupportUrl: "https://www.civicplus.help/codification/docs/advanced-search-options"
+            , azureCodesBlobUrlPrefix: "https://mcclibrary.blob.core.usgovcloudapi.net/codecontent/"
+            , azureMunidocsBlobUrlPrefix: ""
+            , googleReCaptchaPublicKey: "6Lfg8ewpAAAAALyTEdVH88rLZreIgEcnCxgEuZ2S"
+            , meetingsUrl: "https://meetings.municode.com"
+            , adobePdfEmbedApiKey: "e8d165046d63411c9e08c7f1012ec503"
+            , currentYear: new Date().getFullYear()
+            , featureFlags: {"ShowGlobalMessage":false,"UseChatbot":true,"UseCPAuth":true}
+            , cpAuthLoginUrl: "/bff/login"
+            , cpAuthUserUrl: "/bff/user"
+            , externalAuthBaseUrl: "https://cpauthentication.civicplus.com"
+            , disabledUserUrl: "/disabledUser"
+            , civicPlusMuniproMarketingPageUrl: "https://www.civicplus.com/codification-software-services/munipro-municipal-law-research-tool/"
+            , globalMessageId: "1"
+            , municodeNextUrl: "https://library.municode.com"
+        };
+        
+
+        console.log("UseCPAuth = ", serverProps.featureFlags.UseCPAuth);
+    </script>
+    <script>
+         (function(apiKey){
+            (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
+                v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
+                    o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+                y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+                z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+             
+            pendo.initialize({
+                visitor: {
+                    id: null
+                },
+                account: {
+                    id: null
+                }
+            });                         
+        })("d43ca4fd-c072-43c9-52d8-44971b946449");
+            
+    </script>
+    
+        <script src="dist/js/all/all.min.js?v=FZv2h-2qe3avnDviMZoEQH5MPkyRUYJ8ARVV2PkPyvw"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/12.3.1/classic/ckeditor.js"></script>
+</head>
+<!--[if lte IE 9]>
+    <body>
+    <div class="alert alert-warning text-center" style="margin-top: 40px;">
+    <p>We're sorry. Internet Explorer 9 and below are no longer supported. Please use a different browser.</p>
+        <ul class="list-unstyled">
+            <li><a href="https://www.google.com/chrome/browser/">Google Chrome</a></li>
+            <li><a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a></li>
+            <li><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Microsoft Internet Explorer</a></li>
+        </ul>
+    </div>
+    </body>
+<![endif]-->
+
+
+<body class="header-fixed" ng-include="'/library/ng-apps/library_desktop/library_desktop.cshtml'">
+</body>
+
+</html>
+
+
+
+

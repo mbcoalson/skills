@@ -48,7 +48,41 @@ This repository contains specialized Claude Code skills for energy modeling, bui
 
 **[converting-markdown-to-word](.claude/skills/converting-markdown-to-word/)** - Convert Markdown (.md) files to Microsoft Word (.docx) format for sharing with colleagues. Supports single file or batch conversion.
 
-**[git-pushing](.claude/skills/git-pushing/)** - Automated git workflows with conventional commit messages, staging, and smart push handling with Claude Code footer.
+**[git-pushing](.claude/skills/git-pushing/)** - Automated git workflows with conventional commit messages, staging, security checks, and smart push handling with Claude Code footer. Includes automatic scanning for sensitive data (hourly rates, client names, internal paths) before pushing.
+
+### Development Workflow & "Superpowers"
+
+Meta-skills for systematic development practices and workflow optimization:
+
+**[using-superpowers](.claude/skills/using-superpowers/)** - Master skill that enforces checking for and using appropriate skills before ANY response. Establishes the discipline of using skills systematically.
+
+**[brainstorming](.claude/skills/brainstorming/)** - Explore user intent, requirements, and design before implementation. MUST use before creating features, building components, or modifying behavior.
+
+**[writing-plans](.claude/skills/writing-plans/)** - Create comprehensive implementation plans with bite-sized tasks, exact file paths, complete code snippets, and testing steps. Assumes engineer has zero codebase context.
+
+**[executing-plans](.claude/skills/executing-plans/)** - Execute implementation plans in a separate session with review checkpoints. Works with written plans from writing-plans skill.
+
+**[subagent-driven-development](.claude/skills/subagent-driven-development/)** - Execute implementation plans using independent subagents in current session. Fresh subagent per task with code review between tasks.
+
+**[systematic-debugging](.claude/skills/systematic-debugging/)** - Systematic debugging workflow with root cause investigation before proposing fixes. MUST use when encountering bugs, test failures, or unexpected behavior.
+
+**[test-driven-development](.claude/skills/test-driven-development/)** - TDD workflow: write failing test, implement minimal code, verify it passes. Use when implementing features or bugfixes before writing implementation code.
+
+**[verification-before-completion](.claude/skills/verification-before-completion/)** - Verify work is complete, fixed, or passing before claiming success. Run verification commands and confirm output before committing or creating PRs.
+
+**[requesting-code-review](.claude/skills/requesting-code-review/)** - Request code review when completing tasks, implementing major features, or before merging to verify work meets requirements.
+
+**[receiving-code-review](.claude/skills/receiving-code-review/)** - Handle code review feedback with technical rigor and verification. Use before implementing suggestions, especially if feedback seems unclear or technically questionable.
+
+**[using-git-worktrees](.claude/skills/using-git-worktrees/)** - Create isolated git worktrees for feature work with smart directory selection and safety verification. Use when starting feature work that needs isolation.
+
+**[finishing-a-development-branch](.claude/skills/finishing-a-development-branch/)** - Complete development work by presenting structured options for merge, PR, or cleanup. Use when implementation is complete and all tests pass.
+
+**[dispatching-parallel-agents](.claude/skills/dispatching-parallel-agents/)** - Execute 2+ independent tasks in parallel without shared state or sequential dependencies.
+
+**[writing-skills](.claude/skills/writing-skills/)** - Create new Claude Code skills, edit existing skills, or verify skills work before deployment.
+
+**[writing-proposals](.claude/skills/writing-proposals/)** - Create and price energy consulting proposals including ASHRAE audits, benchmarking, commissioning, and compliance consulting. Provides pricing models, cost estimation, and proposal generation.
 
 ## Additional Tools
 
@@ -62,9 +96,9 @@ This repository contains **only** the public-facing Claude Code skills and suppo
 
 **What's included:**
 
-- `.claude/skills/` - All 16 Claude Code skills with SKILL.md files and supporting docs
+- `.claude/skills/` - All 31 Claude Code skills with SKILL.md files and supporting docs
 - Documentation, templates, and reference materials
-- Scripts and automation tools (Node.js, Ruby, Python)
+- Scripts and automation tools (Node.js, Ruby, Python, Bash)
 
 **What's excluded:**
 

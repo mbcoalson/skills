@@ -1,13 +1,13 @@
 # validate-idf-structure.py Examples
 
-## Test Case 1: SECC Model Validation
+## Test Case 1: Commercial Building Model Validation
 
-**File:** Reference SECC model at:
-`User-Files/work-tracking/secc-fort-collins/energy-model/SECC_WSHP_ProposedModel_v3_WaterLoop_RTUHP_DOAS_Pool/run/in_fixed_v3.idf`
+**File:** Example commercial building model (provide path to your own IDF file)
+`path/to/your/model.idf`
 
 **Command:**
 ```bash
-python validate-idf-structure.py in_fixed_v3.idf --report validation_report.md
+python validate-idf-structure.py model.idf --report validation_report.md
 ```
 
 **Expected Results:**
@@ -16,7 +16,7 @@ python validate-idf-structure.py in_fixed_v3.idf --report validation_report.md
 VALIDATE IDF STRUCTURE
 ================================================================================
 
-Input: in_fixed_v3.idf
+Input: model.idf
 IDD Version: 25.1.0
 IDF Version: 25.1
 
@@ -112,7 +112,7 @@ Demonstrates graceful error handling when input file doesn't exist.
 
 ## Performance Benchmarks
 
-**SECC Model (1,560 objects, 295 surfaces):**
+**Example Commercial Building Model (1,560 objects, 295 surfaces):**
 - Validation time: < 5 seconds
 - IDF file size: ~1.2 MB
 - Memory usage: < 100 MB

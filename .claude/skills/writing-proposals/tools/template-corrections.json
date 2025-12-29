@@ -1,0 +1,47 @@
+{
+  "_comment": "Template-specific correction rules learned from user feedback",
+  "_format": {
+    "template_name": {
+      "style_corrections": {
+        "source_style": "target_style"
+      },
+      "find_replace": [
+        {
+          "find": "text to find",
+          "replace": "replacement text",
+          "reason": "why this correction is needed"
+        }
+      ],
+      "formatting_fixes": [
+        {
+          "issue": "description of issue",
+          "fix": "description of fix",
+          "automated": true
+        }
+      ],
+      "manual_steps_remaining": [
+        "Manual fix that can't be automated yet"
+      ]
+    }
+  },
+  "proposal-template.docx": {
+    "style_corrections": {
+      "Normal": "Body Text",
+      "List Paragraph": "Body List"
+    },
+    "find_replace": [],
+    "formatting_fixes": [
+      {
+        "issue": "Normal style used instead of Body Text",
+        "fix": "Automatic remapping in merge_template_and_content()",
+        "automated": true
+      },
+      {
+        "issue": "List paragraphs not using Body List style",
+        "fix": "Automatic detection and remapping of numbered lists",
+        "automated": true
+      }
+    ],
+    "manual_steps_remaining": []
+  }
+}

@@ -68,7 +68,7 @@ Work Command Center is an **orchestrator skill** - it stays focused on deliverab
 - User mentions "QA/QC", "energy model errors", "HVAC topology"
 
 **Example Queries:**
-- "Validate my SECC energy model before simulation"
+- "Validate my energy model before simulation"
 - "Analyze HVAC topology in my EnergyPlus model"
 - "Test parametric ECM scenarios for lighting upgrades"
 - "QA/QC check on EnergyPlus IDF file"
@@ -203,6 +203,90 @@ Work Command Center is an **orchestrator skill** - it stays focused on deliverab
 
 ---
 
+### energize-denver
+
+**Purpose:** Denver Article XIV building performance regulations and compliance requirements
+
+**When to Invoke:**
+
+- User asks about Energize Denver compliance
+- User needs MAI production efficiency metrics
+- User mentions Denver Article XIV, performance targets, or compliance pathways
+- User needs building performance requirements for Denver properties
+- User asks about benchmarking rules or deadline schedules
+
+**Example Queries:**
+
+- "What's the Energize Denver compliance pathway for 970 Yuma Street?"
+- "What are the performance targets for a 20,000 sf office in Denver?"
+- "When is the Energize Denver deadline for this building?"
+- "What documentation do I need for MAI compliance?"
+
+**Return to Command Center With:**
+
+- Compliance pathway identified
+- Deadline information
+- Required documentation list
+- Impact on project deliverables
+
+---
+
+### writing-proposals
+
+**Purpose:** Energy consulting proposal creation and pricing (audits, benchmarking, commissioning, compliance consulting)
+
+**When to Invoke:**
+
+- User needs to create a proposal for energy services
+- User asks about pricing for ASHRAE audits, benchmarking, or commissioning
+- User mentions "proposal", "scope", "pricing estimate", "hours estimate"
+- User needs cost estimation for energy projects
+- User asks about service definitions or labor hour estimates
+
+**Example Queries:**
+
+- "Create a proposal for Level 2 audit at commercial site"
+- "What's the pricing range for benchmarking services?"
+- "Estimate hours for commissioning a 50,000 sf building"
+- "Help me scope and price an energy audit proposal"
+
+**Return to Command Center With:**
+
+- Proposal draft or pricing estimate
+- Project scope definition
+- Labor hour breakdown
+- Next steps for proposal finalization
+
+---
+
+### energize-denver-proposals
+
+**Purpose:** Energize Denver-specific compliance proposal generation (benchmarking, audits, compliance pathways)
+
+**When to Invoke:**
+
+- User needs to create Energize Denver compliance proposal
+- User asks about pricing for Denver Article XIV services
+- User mentions "Energize Denver proposal", "compliance pathway proposal", "MAI audit"
+- User needs timeline planning for Denver compliance work
+- User asks about cost estimation for Denver-specific services
+
+**Example Queries:**
+
+- "Create Energize Denver compliance proposal for 970 Yuma Street"
+- "Price out benchmarking + audit for Denver property"
+- "What's the timeline for Energize Denver compliance pathway work?"
+- "Generate proposal for Denver performance target analysis"
+
+**Return to Command Center With:**
+
+- Proposal draft with Denver-specific requirements
+- Cost estimate based on building size and service type
+- Timeline with Denver deadline constraints
+- Deliverable tracking for proposal follow-up
+
+---
+
 ## Integration Patterns
 
 ### Pattern 1: Quick Delegation (No Context Needed)
@@ -216,17 +300,17 @@ User: "Convert meeting-notes.md to Word"
 ### Pattern 2: Context Handoff (Pass Current Work)
 
 ```
-User: "Validate my SECC energy model"
+User: "Validate my energy model"
 → Invoke: energyplus-assistant
-  - Pass relevant deliverable info (SECC project, deadline, status)
+  - Pass relevant deliverable info (project, deadline, status)
 → Return: "Model validation complete. Found 3 warnings, no errors.
-           Updated SECC deliverable status to 'Ready for Simulation'"
+           Updated deliverable status to 'Ready for Simulation'"
 ```
 
 ### Pattern 3: Iterative Collaboration
 
 ```
-User: "Help me write measures for the SECC model"
+User: "Help me write measures for my energy model"
 → Invoke: writing-openstudio-model-measures
   - User works with skill on measure development
 → Return to Command Center

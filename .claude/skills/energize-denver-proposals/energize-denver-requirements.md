@@ -149,6 +149,282 @@ MAI buildings must select **ONE** of two pathways:
 
 **Benchmarking**: First performance year is 2026, with annual June 1 submissions
 
+---
+
+### Production Efficiency Pathway - Detailed Requirements
+
+**Definition**: MAI buildings can demonstrate 30% production efficiency improvement, meaning **site energy per unit of production falls by 30% relative to baseline**.
+
+This metric suits facilities expecting production growth because they can "measure production efficiency in terms of energy used per widget produced OR energy per some other custom metric."
+
+#### Baseline Establishment
+
+**Baseline Year Options**:
+- **Default baseline: 2022** (first benchmarking year)
+- **Alternative: Any year 2018-2022** with complete benchmarking data
+- **Rationale**: MAI buildings can choose any baseline year from 2018-2022 as long as benchmarking data exists for that year and all subsequent years
+- **Atypical years**: If 2022 was unusual (production ramp-up, shutdown, etc.), owners may request a later baseline with justification
+
+**Baseline Calculation Formula**:
+```
+Baseline Production Efficiency =
+  Weather-Normalized Site Energy Use (kBtu) ÷ Total Production Units (baseline year)
+```
+
+**Data Requirements**:
+- Production data must cover **entire calendar year** ("no more and no less")
+- Can backfill previous years by adding rows in Portfolio Manager
+- Weather normalization is **required** for energy data
+- All production metrics must be entered in Energy Star Portfolio Manager
+
+**If No Baseline Year Data Exists**:
+- Choose any year 2018-2022 where production data is available
+- No requirement to fabricate missing years
+- CASR may establish "reasonable baseline" if no historical data exists (less owner control)
+
+#### Production Metric Definition
+
+**Custom Metric Approval Process**:
+- Owners must define production unit (e.g., "widgets", "signs", "gallons treated")
+- **CASR approval required** for any custom metric via MAI Alternate Compliance Option (ACO) application
+- Metric must represent total production output for the calendar year
+
+**Example Production Metrics** (CASR generic guidance):
+- Bakery: Number of loaves of bread baked annually
+- Manufacturing: Units/widgets produced
+- Print shop: Signs produced, square footage of print material, linear feet (owner-defined, subject to approval)
+- Data center: IT load per server rack, per square foot (owner-defined, subject to approval)
+- Water/wastewater: Gallons treated, MGD capacity (owner-defined, subject to approval)
+- Agriculture: Growing area (sf), crop yield (owner-defined, subject to approval)
+
+**Important**: CASR does not publish a pre-approved list of metrics by industry. Each building must propose and obtain approval for their specific metric.
+
+**Portfolio Manager Setup**:
+- Custom metric entered as: "Weather Normalized Site Energy Use (kBtu) per [metric]"
+- Annual total production units entered for each calendar year
+- Data must be included in Energy Star Data Verification Checklist
+
+#### Target Calculation
+
+**Performance Target Formula**:
+```
+Target Production Efficiency = Baseline × 0.70 (30% improvement)
+
+Example:
+  Baseline: 100 kWh per sign
+  Target: 70 kWh per sign (30% reduction)
+```
+
+**Compliance Demonstration**:
+- Annual benchmarking submission (June 1) with previous calendar year data
+- Single-year evaluation (no multi-year averaging allowed)
+- Must demonstrate actual production efficiency ≤ target efficiency
+
+**Pathways Using Production Efficiency**:
+
+1. **Performance Pathway**:
+   - Demonstrate 30% improvement through annual benchmarking
+   - No detailed action plan required
+   - First performance year: 2026
+
+2. **Prescriptive Pathway**:
+   - Build action plan showing measures to achieve 30% improvement
+   - Must document equipment upgrades, costs, savings, ROI
+   - Implementation deadlines: Interim 3/1/2029, Final 3/1/2032
+   - EMV Report 6/1/2033 must verify 30% savings achieved
+
+#### Application Requirements (Dec 31, 2025 Deadline)
+
+**Required Forms**:
+1. **MAI Designation Form** (if not already filed)
+2. **MAI Alternate Compliance Option (ACO) Application**
+3. **Custom Metric Approval Request** (for production efficiency)
+
+**Supporting Documentation**:
+- Baseline production data (chosen year 2018-2022)
+- Historical benchmarking data (baseline year through present)
+- Production metric definition and justification
+- If Prescriptive: Complete Action Plan (see below)
+
+**Action Plan Requirements** (Prescriptive Pathway only):
+- List each energy conservation measure (ECM)
+- For each ECM:
+  - Implementation cost
+  - EUI/production efficiency savings
+  - Savings-to-investment ratio (SIR)
+  - Return on investment (ROI)
+  - Total project cost
+  - Expected implementation date
+- Total must demonstrate 30% production efficiency improvement
+
+#### Ongoing Compliance (Prescriptive Pathway)
+
+**Reporting Deadlines**:
+- **March 1, 2029**: Interim Implementation Report
+- **March 1, 2032**: Final Implementation Report
+- **June 1, 2033**: EMV (Evaluation, Monitoring & Verification) Report
+
+**EMV Report Requirements**:
+- Document actual 30% savings achieved (after Renewable/Fossil Fuel credits applied)
+- If savings below 20%: Must submit corrective action plan
+- If noncompliant: Automatically switched to 30% EUI reduction pathway with penalties
+
+#### Data Quality and Verification
+
+**Verification Requirements**:
+- Production data must be entered in Portfolio Manager
+- Must provide production data to Energy Star data verifier
+- Include verification notes in "Summary of All Associated Metrics"
+- **Measured data required** (estimated data not explicitly allowed)
+
+**Data Consistency**:
+- Same custom metric must be used each year
+- Production totals must represent entire calendar year
+- No partial-year or pro-rated data allowed
+
+**Handling Production Changes**:
+- Product mix changes: Not explicitly addressed by CASR (gap identified)
+- Metric changes: Cannot switch metrics mid-cycle without CASR approval (process unclear)
+
+#### Credits Available for Production Efficiency
+
+**Renewable Energy Credit**:
+- On-site or off-site renewable power generation
+- Reduces total energy input in production efficiency calculation
+- Applicable to both Prescriptive and Performance pathways
+
+**Fossil Fuel Reduction Credit** (MAI-specific):
+- If fossil fuel use reduced between baseline and final target years
+- CASR applies credit to performance target
+- Allowed in action plan tables and EMV evaluations
+- Helps achieve 30% production efficiency improvement
+
+**Note**: Electrification Incentive (10% easier target for 80% electric buildings) applies to non-MAI buildings only. MAI buildings use Fossil Fuel Reduction Credit instead.
+
+#### Decision Criteria: When to Choose Production Efficiency
+
+**Production Efficiency Pathway Favored If**:
+- ✅ Production expected to **expand/grow**
+- ✅ Process loads are significant portion of total energy (>50%)
+- ✅ Reliable production data exists (2018-2022 baseline available)
+- ✅ Production metric is clear and measurable
+- ✅ Already implemented process-related efficiency upgrades
+
+**Whole-Building 30% EUI Reduction Favored If**:
+- ❌ No reliable production data (or cannot establish tracking)
+- ❌ Production stable or declining
+- ❌ Energy dominated by HVAC/lighting (not production-dependent)
+- ❌ Product mix highly variable (difficult to normalize)
+
+**CASR Recommendation**: "Choose production efficiency if production is expected to expand" and consult with MAI-trained auditor to identify best metric and measures.
+
+#### Penalties for Production Efficiency Non-Compliance
+
+**Penalty Calculation**:
+- Based on **kBtu shortfall** between target and actual performance
+- Shortfall = (Actual Production Efficiency - Target Production Efficiency) × Total Production Units
+- Convert to kBtu shortfall, then multiply by penalty rate
+
+**Updated Penalty Rates** (April 2025):
+- **$0.15/kBtu**: Buildings on standard updated timeline
+- **$0.23/kBtu**: Buildings opted into 2028/2032 timeline
+- **$0.35/kBtu**: Buildings granted timeline extensions
+- **+$0.10/kBtu surcharge**: Extensions requested after target year ends
+
+**Example Penalty Calculation**:
+```
+Building on 2028/2032 timeline with production efficiency shortfall:
+  Shortfall: 20,000 kBtu
+  Rate: $0.23/kBtu
+  Penalty: 20,000 × $0.23 = $4,600
+```
+
+**Prescriptive Pathway Failure**:
+- Automatically switched to 30% EUI reduction performance pathway
+- Penalized based on EUI target gap (not production efficiency)
+
+**Enforcement Process**:
+1. CASR notifies owner of non-compliance
+2. 90 days to file corrective action plan or timeline extension
+3. Notice of violation issued if no response
+4. Administrative citation and penalties assessed
+5. Unpaid penalties become property liens after 180 days
+
+#### Timeline Extensions for MAI Buildings
+
+**Extension Types**:
+
+1. **Interim Compliance Hold**: Two-year pause for temporary issues
+2. **Timeline Extension**: Long-term adjustment with owner-developed compliance plan
+
+**Valid Reasons for Extension**:
+- End-of-life equipment replacement planning
+- Major renovations in progress
+- Whole-building electrification projects
+- District steam system limitations
+- Energy service capacity constraints (requires Xcel documentation)
+- Innovative projects causing implementation delays
+- Under-resourced situations (case-by-case)
+
+**Application Requirements**:
+- Online Timeline Extension application form
+- ASHRAE Level II audit (submitted via DOE Audit Template Tool)
+- Detailed compliance plan (CASR template) showing:
+  - Specific measures with timelines
+  - Financing strategy
+  - Expected savings verification
+- Capacity Constraint Response Template (if applicable)
+
+**Timing Considerations**:
+- Can apply anytime, but **applying after target year ends** triggers higher penalty rates (+$0.10/kBtu surcharge)
+- Standard timeline opt-in: Shifts interim to 2028, final to 2032
+- Custom extensions: Adjust targets as justified by compliance plan
+
+**Execution Requirements**:
+- Must execute compliance plan during extension period
+- Failure to execute plan triggers higher penalties
+- Multiple extensions: Not explicitly addressed (gap identified)
+
+#### Known Gaps and Limitations
+
+**Information NOT Published by CASR**:
+1. Pre-approved production metrics by industry type
+2. Handling product mix changes or metric normalization over time
+3. Process for changing metrics after ACO application approval
+4. MAI ACO application review timeline
+5. Treatment of estimated production data or partial-year gaps
+6. Procedure for incomplete or rejected applications
+7. Whether multiple timeline extensions are allowed
+8. Specific process load percentage thresholds for pathway selection
+
+**Questions Requiring Direct CASR Contact**:
+1. What production metrics has CASR already approved for specific industries (print shops, data centers, water treatment)?
+2. How to document and normalize production when product mix changes significantly year-to-year?
+3. Can buildings switch from production efficiency to another metric after ACO approval, and what is the process?
+4. What is expected review timeline for ACO applications submitted near Dec 31, 2025 deadline?
+5. Does CASR permit estimated/modeled production data when measured records unavailable?
+6. Can owners request multiple timeline extensions?
+
+**Workarounds for Gaps**:
+- Product mix changes: Define metric broadly (e.g., "sf of print material" vs "number of signs") to accommodate variety
+- Missing data: Choose baseline year where data exists (2018-2022 flexibility)
+- Uncertainty: Request extension to establish tracking systems before committing to pathway
+
+#### Additional Resources
+
+**CASR-Published Documents**:
+- [MAI Guide: Custom Metrics in ESPM (PDF)](https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-and-Resiliency) - Step-by-step Portfolio Manager instructions
+- [Capacity Constraint Response Template (DOCX)](https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-and-Resiliency) - For Xcel capacity issues
+- [Timeline Extension Application (Formsite)](https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-and-Resiliency) - Online form with required attachments
+- [Energy Star Data Verification Checklist](https://portfoliomanager.energystar.gov/) - Required for production metric verification
+
+**Key CASR Contact Points**:
+- MAI-specific questions: energizedenver@denvergov.org
+- Timeline extension guidance: CASR compliance team
+- Custom metric approval: Submit via MAI ACO application
+
+---
+
 ### MAI Timeline and Deadlines
 
 | Date | Requirement |
@@ -203,13 +479,30 @@ MAI buildings can request extended compliance periods under certain circumstance
 
 ### Penalties
 
-**Amount**: Up to $0.70 per year for each required kBtu reduction the building fails to achieve
+**Updated Penalty Rates (April 2025)**:
 
-**Example**:
+**Standard Commercial Buildings (25,000+ sf)**:
+- **$0.15/kBtu**: Buildings on standard updated timeline
+- **$0.23/kBtu**: Buildings opted into 2028/2032 timeline
+- **$0.35/kBtu**: Buildings granted timeline extensions
+- **+$0.10/kBtu surcharge**: Extensions requested after target year ends
+
+**Previous Rate** (historical reference): $0.70/kBtu
+
+**MAI Buildings**: See Production Efficiency Pathway section above for MAI-specific penalty rates and calculations.
+
+**Penalty Calculation**:
+```
+Penalty = kBtu Shortfall × Penalty Rate
+
+Shortfall = Target kBtu reduction - Actual kBtu reduction
+```
+
+**Example** (Standard timeline, $0.15/kBtu rate):
 - Building target: Reduce 100,000 kBtu/year
 - Actual reduction: 75,000 kBtu/year
 - Shortfall: 25,000 kBtu
-- Penalty: 25,000 kBtu × $0.70 = $17,500
+- Penalty: 25,000 kBtu × $0.15 = $3,750
 
 ### Non-Payment Consequences
 

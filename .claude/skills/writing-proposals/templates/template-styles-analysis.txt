@@ -1,0 +1,616 @@
+================================================================================
+WORD TEMPLATE STYLE ANALYSIS
+Template: proposal-template.docx
+================================================================================
+
+PARAGRAPH STYLES (38 total)
+================================================================================
+
+Style: Body Content (Content Fonts)
+  Type: Paragraph
+  Base Style: [No Paragraph Style]
+  Font: Source Sans Pro
+  Size: 11.0pt
+  Color: #222222
+  Space After: 9.0pt
+
+Style: Body Text
+  Type: Paragraph
+  Base Style: Normal
+  Font: Source Sans Pro
+  Size: None
+  Color: #222222
+  Space After: 9.0pt
+
+Style: Body Text Bullet
+  Type: Paragraph
+  Base Style: Body Text
+  Size: None
+  Color: #221e1f
+  Left Indent: 32.4pt
+
+Style: Bold Orange (Content Fonts)
+  Type: Paragraph
+  Base Style: Normal
+  Font: Source Sans Pro
+  Size: None
+  Bold: True
+  Color: #e28c05
+  Line Spacing: 1.2
+
+Style: Callout Font
+  Type: Paragraph
+  Base Style: Default
+  Font: Source Sans Pro
+  Size: 14.0pt
+  Bold: True
+  Italic: True
+  Color: #e28c05
+  Space Before: 9.0pt
+  Space After: 9.0pt
+
+Style: Case Study Side Box
+  Type: Paragraph
+  Base Style: Body Text
+  Size: 10.0pt
+  Color: None
+  Space After: 2.0pt
+  Left Indent: 72.0pt
+
+Style: Case Study Side Box Header
+  Type: Paragraph
+  Base Style: Case Study Side Box
+  Size: 11.0pt
+  Bold: True
+  Color: #435363
+  Space Before: 9.0pt
+  Space After: 0.0pt
+  Left Indent: 54.0pt
+
+Style: Default
+  Type: Paragraph
+  Font: Manrope
+  Size: 12.0pt
+  Color: #000000
+  Space After: 0.0pt
+  Line Spacing: 1.0
+
+Style: Footer
+  Type: Paragraph
+  Base Style: Normal
+  Size: None
+  Color: None
+
+Style: Header
+  Type: Paragraph
+  Base Style: Normal
+  Size: None
+  Color: None
+
+Style: Heading 1
+  Type: Paragraph
+  Base Style: Normal
+  Font: Cambria
+  Size: 24.0pt
+  Bold: True
+  Color: #e28c05
+  Space After: 9.0pt
+
+Style: Heading 2
+  Type: Paragraph
+  Base Style: Normal
+  Font: Cambria
+  Size: 18.0pt
+  Color: #435363
+
+Style: Heading 3
+  Type: Paragraph
+  Base Style: Normal
+  Font: Cambria
+  Size: 14.0pt
+  Bold: True
+  Color: #e28c05
+
+Style: Heading 4
+  Type: Paragraph
+  Base Style: Normal
+  Size: None
+  Bold: True
+  Italic: True
+  Color: #e28c05
+  Space Before: 4.5pt
+
+Style: Heading 5
+  Type: Paragraph
+  Base Style: Normal
+  Font: Cambria
+  Size: None
+  Bold: True
+  Color: #435363
+
+Style: Heading 6
+  Type: Paragraph
+  Base Style: Normal
+  Size: None
+  Italic: True
+  Color: #8397ab
+  Space Before: 2.0pt
+
+Style: Left Indent Box - Call out font
+  Type: Paragraph
+  Base Style: Normal
+  Font: Cambria
+  Size: 14.0pt
+  Bold: True
+  Color: #ffffff
+  Left Indent: 36.0pt
+
+Style: List Bullets
+  Type: Paragraph
+  Base Style: Body Text
+  Size: None
+  Color: None
+
+Style: List Paragraph
+  Type: Paragraph
+  Base Style: Normal
+  Size: None
+  Color: None
+
+Style: No Spacing
+  Type: Paragraph
+  Size: None
+  Color: None
+  Space After: 0.0pt
+  Line Spacing: 1.0
+
+Style: Normal
+  Type: Paragraph
+  Font: Arial
+  Size: None
+  Color: None
+  Space After: 0.0pt
+  Line Spacing: 1.0
+
+Style: Pa1
+  Type: Paragraph
+  Base Style: Default
+  Font: Source Sans Pro
+  Size: None
+  Color: None
+  Line Spacing: 140335
+
+Style: Pa2
+  Type: Paragraph
+  Base Style: Normal
+  Font: Calibri
+  Size: 12.0pt
+  Color: None
+  Line Spacing: 140335
+
+Style: Photo Caption
+  Type: Paragraph
+  Base Style: Normal
+  Font: Source Sans Pro
+  Size: 10.0pt
+  Italic: True
+  Color: #222222
+
+Style: Quote
+  Type: Paragraph
+  Base Style: Normal
+  Size: None
+  Italic: True
+  Color: #595959
+  Alignment: CENTER (1)
+  Space Before: 10.0pt
+  Space After: 8.0pt
+  Left Indent: 43.2pt
+
+Style: Resume Experience
+  Type: Paragraph
+  Base Style: Normal
+  Font: Cambria
+  Size: None
+  Bold: True
+  Italic: True
+  Color: #435363
+  Left Indent: 36.0pt
+
+Style: Resume Side Box
+  Type: Paragraph
+  Base Style: Case Study Side Box Header
+  Size: 10.0pt
+  Bold: False
+  Color: #222222
+  Space Before: 0.0pt
+  Space After: 9.0pt
+
+Style: Right Indent Box - Call out font
+  Type: Paragraph
+  Base Style: Normal
+  Font: Cambria
+  Size: 14.0pt
+  Bold: True
+  Color: #ffffff
+  Left Indent: 7.2pt
+
+Style: Second Heading (Headers & Subheaders)
+  Type: Paragraph
+  Base Style: Normal
+  Font: Cambria
+  Size: 18.0pt
+  Bold: True
+  Color: #435363
+  Line Spacing: 266700
+
+Style: Table Paragraph
+  Type: Paragraph
+  Base Style: Normal
+  Size: None
+  Color: None
+
+Style: Title
+  Type: Paragraph
+  Base Style: Normal
+  Size: 30.0pt
+  Bold: True
+  Color: None
+  Line Spacing: 424180
+  Left Indent: 5.15pt
+
+Style: [Basic Paragraph]
+  Type: Paragraph
+  Base Style: [No Paragraph Style]
+  Size: None
+  Color: None
+
+Style: [No Paragraph Style]
+  Type: Paragraph
+  Font: MinionPro-Regular
+  Size: 12.0pt
+  Color: #000000
+  Space After: 0.0pt
+  Line Spacing: 1.2
+
+Style: annotation subject
+  Type: Paragraph
+  Base Style: annotation text
+  Font: Arial
+  Size: None
+  Bold: True
+  Color: None
+  Space After: 0.0pt
+
+Style: annotation text
+  Type: Paragraph
+  Base Style: Normal
+  Size: 10.0pt
+  Color: None
+  Space After: 6.0pt
+
+Style: toc 1
+  Type: Paragraph
+  Base Style: Normal
+  Size: None
+  Color: None
+  Space After: 5.0pt
+
+Style: toc 2
+  Type: Paragraph
+  Base Style: Normal
+  Size: None
+  Color: None
+  Space After: 5.0pt
+  Left Indent: 11.0pt
+
+Style: toc 3
+  Type: Paragraph
+  Base Style: Normal
+  Size: None
+  Color: None
+  Space After: 5.0pt
+  Left Indent: 22.0pt
+
+
+CHARACTER STYLES (37 total)
+================================================================================
+
+Style: Body Text Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Font: Source Sans Pro
+  Size: None
+  Color: #222222
+
+Style: Book Title
+  Type: Character
+  Base Style: Default Paragraph Font
+  Size: None
+  Bold: True
+  Italic: True
+  Color: None
+
+Style: Callout Font Char
+  Type: Character
+  Base Style: Default Char
+  Font: Source Sans Pro
+  Size: 14.0pt
+  Bold: True
+  Italic: True
+  Color: #e28c05
+
+Style: Case Study Side Box Char
+  Type: Character
+  Base Style: Body Text Char
+  Font: Source Sans Pro
+  Size: 10.0pt
+  Color: #222222
+
+Style: Case Study Side Box Header Char
+  Type: Character
+  Base Style: Case Study Side Box Char
+  Font: Source Sans Pro
+  Size: 10.0pt
+  Bold: True
+  Color: #435363
+
+Style: Comment Subject Char
+  Type: Character
+  Base Style: Comment Text Char
+  Font: Arial
+  Size: 10.0pt
+  Bold: True
+  Color: None
+
+Style: Comment Text Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Size: 10.0pt
+  Color: None
+
+Style: Default Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Font: Manrope
+  Size: 12.0pt
+  Color: #000000
+
+Style: Default Paragraph Font
+  Type: Character
+  Size: None
+  Color: None
+
+Style: Footer Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Font: Arial
+  Size: None
+  Color: None
+
+Style: Header Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Font: Arial
+  Size: None
+  Color: None
+
+Style: Heading 1 Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Font: Cambria
+  Size: 24.0pt
+  Bold: True
+  Color: #e28c05
+
+Style: Heading 2 Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Font: Cambria
+  Size: 18.0pt
+  Color: #435363
+
+Style: Heading 3 Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Font: Cambria
+  Size: 14.0pt
+  Bold: True
+  Color: #e28c05
+
+Style: Heading 4 Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Size: None
+  Bold: True
+  Italic: True
+  Color: #e28c05
+
+Style: Heading 5 Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Font: Cambria
+  Size: None
+  Bold: True
+  Color: #435363
+
+Style: Heading 6 Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Size: None
+  Italic: True
+  Color: #8397ab
+
+Style: Hyperlink
+  Type: Character
+  Base Style: Default Paragraph Font
+  Size: None
+  Color: #e28c05
+
+Style: Intense Emphasis
+  Type: Character
+  Base Style: Default Paragraph Font
+  Size: None
+  Italic: True
+  Color: #e28c05
+
+Style: Intense Reference
+  Type: Character
+  Base Style: Default Paragraph Font
+  Size: None
+  Bold: True
+  Color: #e28c05
+
+Style: Left Indent Box - Call out font Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Font: Cambria
+  Size: 14.0pt
+  Bold: True
+  Color: #ffffff
+
+Style: List Bullets Char
+  Type: Character
+  Base Style: Body Text Char
+  Font: Source Sans Pro
+  Size: None
+  Color: #222222
+
+Style: List Paragraph Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Font: Arial
+  Size: None
+  Color: None
+
+Style: No Spacing Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Size: None
+  Color: None
+
+Style: Photo Caption Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Font: Source Sans Pro
+  Size: 10.0pt
+  Italic: True
+  Color: #222222
+
+Style: Quote Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Font: Arial
+  Size: None
+  Italic: True
+  Color: #595959
+
+Style: Resume Experience Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Font: Cambria
+  Size: None
+  Bold: True
+  Italic: True
+  Color: #435363
+
+Style: Resume Side Box Char
+  Type: Character
+  Base Style: Case Study Side Box Header Char
+  Font: Source Sans Pro
+  Size: 10.0pt
+  Bold: False
+  Color: #222222
+
+Style: Right Indent Box - Call out font Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Font: Cambria
+  Size: 14.0pt
+  Bold: True
+  Color: #ffffff
+
+Style: Strong
+  Type: Character
+  Base Style: Default Paragraph Font
+  Size: None
+  Bold: True
+  Color: None
+
+Style: Subtle Emphasis
+  Type: Character
+  Base Style: Default Paragraph Font
+  Size: None
+  Italic: True
+  Color: #595959
+
+Style: Subtle Reference
+  Type: Character
+  Base Style: Default Paragraph Font
+  Size: None
+  Color: #707070
+
+Style: Title Char
+  Type: Character
+  Base Style: Default Paragraph Font
+  Font: Arial
+  Size: 30.0pt
+  Bold: True
+  Color: None
+
+Style: Unresolved Mention
+  Type: Character
+  Base Style: Default Paragraph Font
+  Size: None
+  Color: #605e5c
+
+Style: annotation reference
+  Type: Character
+  Base Style: Default Paragraph Font
+  Size: 8.0pt
+  Color: None
+
+Style: eop
+  Type: Character
+  Base Style: Default Paragraph Font
+  Size: None
+  Color: None
+
+Style: normaltextrun
+  Type: Character
+  Base Style: Default Paragraph Font
+  Size: None
+  Color: None
+
+
+OTHER STYLES (5 total)
+================================================================================
+
+Style: Grid Table Light (Type: TABLE (3))
+Style: Iconergy Proposal Table (Type: TABLE (3))
+Style: No List (Type: LIST (4))
+Style: Normal Table (Type: TABLE (3))
+Style: Table Grid (Type: TABLE (3))
+
+================================================================================
+SUMMARY
+================================================================================
+Total Paragraph Styles: 38
+Total Character Styles: 37
+Total Other Styles: 5
+
+KEY STYLES FOR PROPOSALS:
+  ✓ Normal
+  ✓ Body Text
+  ✗ Body Text 2 (not found)
+  ✗ Body Text 3 (not found)
+  ✓ Heading 1
+  ✓ Heading 2
+  ✓ Heading 3
+  ✓ Heading 4
+  ✓ Title
+  ✗ Subtitle (not found)
+  ✓ List Paragraph
+  ✓ Quote
+
+================================================================================

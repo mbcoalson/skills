@@ -1,0 +1,53 @@
+{
+  "_comment": "Example mapping file for Word template automation",
+  "_usage": "python tools/word-template-automation.py template.docx output.docx --mapping example-mapping.json",
+
+  "{{CLIENT_NAME}}": "Mytikas Industries",
+  "{{CLIENT_ADDRESS}}": "1173 State Highway 120, Florence, CO 81226",
+  "{{CLIENT_CONTACT_NAME}}": "Kelly Jones",
+  "{{CLIENT_CONTACT_TITLE}}": "Grant Writer",
+  "{{CLIENT_CONTACT_EMAIL}}": "Kelly.Jones@haastechwriting.com",
+  "{{CLIENT_CONTACT_PHONE}}": "207-807-8340",
+
+  "{{PROJECT_NAME}}": "Industrial Energy Feasibility Study",
+  "{{PROJECT_DESCRIPTION}}": "Comprehensive energy and emissions feasibility study for manufacturing facility compliance with CITCO grant requirements",
+  "{{FACILITY_TYPE}}": "Manufacturing (steel production, tiny homes, cabinet-making)",
+  "{{BUILDING_SIZE}}": "150,000 sf",
+  "{{BUILDING_SIZE_OPERATIONAL}}": "120,000 sf",
+
+  "{{SERVICE_TYPE}}": "Industrial Energy Feasibility Study",
+  "{{SERVICE_LEVEL}}": "CITCO-Compliant Feasibility Study",
+  "{{GRANT_PROGRAM}}": "Colorado Industrial Tax Credit Offering (CITCO)",
+  "{{GRANT_DEADLINE}}": "December 31, 2025",
+
+  "{{SCOPE_SUMMARY}}": "Baseline energy assessment, equipment load projection, efficiency measures analysis, solar feasibility, grant/incentive research, and CITCO-compliant reporting",
+
+  "{{TIMELINE}}": "January 2026 - April 2026 (4 months)",
+  "{{START_DATE}}": "January 2026",
+  "{{COMPLETION_DATE}}": "April 2026",
+  "{{SITE_VISIT_DATE}}": "February 2026",
+
+  "{{TOTAL_FEE}}": "$19,000",
+  "{{PAYMENT_SCHEDULE}}": "30% at kickoff, 40% after site visit, 30% at final delivery",
+  "{{PRICING_MODEL}}": "Fixed Fee",
+
+  "{{DELIVERABLE_PRIMARY}}": "CITCO-compliant Industrial Energy Feasibility Study Report with PE signature",
+  "{{DELIVERABLE_SECONDARY}}": "Executive summary, equipment inventory, grant application support documentation",
+
+  "{{PE_NAME}}": "Matthew Coalson, PE",
+  "{{PE_LICENSE}}": "Colorado Professional Engineer License #12345",
+  "{{PE_SIGNATURE_REQUIRED}}": "Yes - per CITCO requirement",
+
+  "{{PROPOSAL_DATE}}": "December 19, 2025",
+  "{{PROPOSAL_VALID_UNTIL}}": "March 19, 2026",
+
+  "{{COMPANY_NAME}}": "Iconergy",
+  "{{COMPANY_ADDRESS}}": "Denver, Colorado",
+  "{{COMPANY_PHONE}}": "720-778-6000",
+  "{{COMPANY_WEBSITE}}": "www.iconergy.com",
+
+  "{{CONTACT_NAME}}": "Matt Coalson",
+  "{{CONTACT_TITLE}}": "Senior Energy Engineer",
+  "{{CONTACT_EMAIL}}": "mcoalson@iconergy.com",
+  "{{CONTACT_PHONE}}": "720-778-6000"
+}

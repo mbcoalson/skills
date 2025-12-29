@@ -60,6 +60,21 @@ fi
 info "Staging all changes..."
 git add .
 
+# Run security check (unless explicitly skipped)
+if [ -z "$SKIP_SECURITY_CHECK" ]; then
+    SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    if [ -f "$SCRIPT_DIR/security_check.sh" ]; then
+        if ! bash "$SCRIPT_DIR/security_check.sh"; then
+            error "Security check failed. Fix issues or set SKIP_SECURITY_CHECK=1 to bypass."
+            exit 1
+        fi
+    else
+        warn "Security check script not found at $SCRIPT_DIR/security_check.sh"
+    fi
+else
+    warn "SECURITY CHECK SKIPPED (SKIP_SECURITY_CHECK is set)"
+fi
+
 # Get staged files for commit message analysis
 STAGED_FILES=$(git diff --cached --name-only)
 DIFF_STAT=$(git diff --cached --stat)
